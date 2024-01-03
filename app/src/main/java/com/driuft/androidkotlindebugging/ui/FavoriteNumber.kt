@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.driuft.androidkotlindebugging.R
+import java.util.Random
 
 class FavoriteNumber : AppCompatActivity() {
 
@@ -13,7 +14,8 @@ class FavoriteNumber : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorite_number)
 
-        val number: Int = null!!
+
+        val number: Int = Random().nextInt(200)
         favoriteNumber.text = "$number"
     }
 }
